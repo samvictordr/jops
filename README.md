@@ -1,7 +1,7 @@
 # jops
 Java application containerization demonstration with JDBC/MySQL containers.
 
-## Installation and Set-up instructions:
+## Installation and Set-up instructions(Local Setup):
 clone the project, get it set up on VSCode or Eclipse (choose your poison, go wild) and compile the package with:
 
 ```shell
