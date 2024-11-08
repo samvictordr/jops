@@ -6,9 +6,11 @@ services:
     depends_on:
       - db
     environment:
-      - DB_URL=jdbc:mysql://db:3306/bank-db
+      - DB_URL=jdbc:mysql://db:3306/bankdb
       - DB_USER=root
       - DB_PASSWORD=rootpassword
+    stdin_open: true       # Keep the standard input open
+    tty: true              # Allocate a pseudo-terminal for interaction
     networks:
       - app-network
 
