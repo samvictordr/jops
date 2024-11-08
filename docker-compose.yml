@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    environment:
+      - DB_URL=jdbc:mysql://db:3306/bank-db
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+    networks:
+      - app-network
+
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: bankdb
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+
+networks:
+  app-network:
